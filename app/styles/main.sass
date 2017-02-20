@@ -1,0 +1,189 @@
+// bower:scss
+// endbower
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500')
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface')
+
+@import reset
+
+=top-menu-font
+  font: 200 1.3vw Montserrat
+
+=sub-menu-font
+  font: 200 0.9vw Montserrat
+  text-transform: uppercase
+  a, button
+    font-weight: 500
+    text-transform: uppercase
+
+$body-width: 90%
+
+li
+  display: inline-block
+a
+  display: inline-block
+  text-transform: capitalize
+
+ul:first-child
+  +top-menu-font
+
+ul:nth-child(2)
+  +sub-menu-font
+
+body
+  width: $body-width
+  margin: 0 auto
+
+header
+  position: relative
+  img[alt="B&O logo"]
+    position: absolute
+    left: 0
+    width: 7vw
+  width: 100%
+  display: flex
+  justify-content: center
+  ul
+    display: flex
+    justify-content: center
+    &:first-child
+      border-bottom: 1px solid rgba(0,0,0,0.2)
+      a
+        +top-menu-font
+        padding: 1.5vw
+    &:nth-child(2)
+      align-items: center
+      *
+        +sub-menu-font
+      a
+        padding: 1.2vw
+
+      button
+        display: block
+        background: black
+        color: white
+        padding: 0.6vw 1vw
+        border-radius: 60px
+        border: none
+article
+  background: rgba(0,0,0,0.07)
+  position: relative
+  text-align: left
+  width: 100%
+  flex-wrap: wrap
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: center
+  height: 60vh
+  p
+    font: 200 1.8vw Montserrat
+    .number
+      font-weight: 300
+    .currency
+      font-weight: 500
+  h1, p
+    width: 35%
+    padding-right: 10vw
+    margin: 0.5vw
+  h1
+    font: 200 3vw Montserrat
+    text-transform: uppercase
+  img
+    position: absolute
+    left: 10%
+    top: 10%
+    height: 50vh
+
+body
+  & > nav
+    margin-top: 1vw
+    background: rgba(0,0,0,0.9)
+    display: flex
+    flex-direction: column
+    color: white
+    justify-content: center
+    ul
+      display: flex
+      justify-content: center
+      border-bottom: 1px solid rgba(255,255,255,0.3)
+      a, label
+        padding: 1.2vw
+      select
+        all: unset
+        background: black
+        width: auto
+        padding: 0.5vw 2vw
+        border: none
+        border-radius: 50px
+        height: auto
+        align-self: center
+
+section
+  padding: 10vw 0
+  background: rgba(0,0,0,0.8)
+  text-align: center
+  p
+    font: 4vw "Abril Fatface"
+    color: white
+  a
+    +sub-menu-font
+    color: rgba(255,255,255,0.5)
+    font-weight: 500
+
+footer
+  display: flex
+  justify-content: center
+
+  @extend section
+  padding: 1vw
+  p
+    +sub-menu-font
+    padding: 0 0.2vw
+    &:first-child
+      padding: 0 1vw
+aside
+  display: none
+  position: fixed
+  right: 0
+  bottom: 0
+  width: 50%
+  background: rgba(200,200,200,1)
+  text-align: center
+  p, a
+    float: right
+    width: 40%
+    margin: 2% 5%
+    +top-menu-font
+  button
+    width: 2vw
+    height: 2vw
+    border-radius: 50px
+    outline: none
+    border: none
+    background: rgba(60,60,60,1)
+    position: absolute
+    left: -10px
+    top: -10px
+    color: white
+    +sub-menu-font
+    font-weight: 500
+  a
+    text-align: center
+    background: gray
+    width: 30%
+    padding: 3%
+    margin-right: (50% - 2*3% - 30%) / 2
+    border-radius: 10px
+    color: white
+    +sub-menu-font
+    font-weight: 500
+
+  img
+    float: left
+    display: inline-block
+    width: 50%
+  p:nth-of-type(1)
+    margin-top: 2vw
+    font-weight: 500
+    font-size: 1.5vw
