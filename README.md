@@ -6,4 +6,5 @@ run in terminal:
 
 $ bower install
 $ npm install
+$ gulp
 $ gulp serve
