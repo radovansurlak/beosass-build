@@ -8,3 +8,9 @@ $ bower install
 $ npm install
 $ gulp
 $ gulp serve
+
+If you want to run it on your server, run:
+
+$ gulp dist
+
+This will create "dist" folder, which contains all the required files 
